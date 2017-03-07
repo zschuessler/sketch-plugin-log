@@ -1,6 +1,6 @@
 {
   "name": "sketch-plugin-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility class for managing output to the Mac system log from your Sketch plugin.",
   "main": "index.js",
   "repository": {

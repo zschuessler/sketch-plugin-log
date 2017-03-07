@@ -5,9 +5,14 @@
  * @classdesc A utility class for managing output to the Mac system log from your Sketch plugin.
  * @constructor
  *
+ * @property {object} context A generic object Sketch provides with information on the currently running Sketch instance.
+ * @property {object} settings A settings object which tracks configuration options for this class.
+ * @property {string} settings.logPrefix An optional prefix to append to all logs. Useful for filtering system logs.
+ *
  * @example
  * var logger = new SketchPluginLog();
- * logger.setPrefix('myPluginName')
+ * logger
+ *   .setPrefix('myPluginName')
  *   .setContext(sketchContext);
  *
  * logger.log('Hello world!');
@@ -16,7 +21,7 @@ function SketchPluginLog() {
     this.context = null;
 
     this.settings = {
-        logPrefix: ' '
+        logPrefix: ''
     };
 }
 
@@ -27,6 +32,7 @@ function SketchPluginLog() {
  *
  * @param {string} prefixString The string to use as prefix.
  * @returns {SketchPluginLog}
+ * @method
  */
 SketchPluginLog.prototype.setLogPrefix = function(prefixString) {
     this.settings.logPrefix = prefixString;
@@ -62,6 +68,8 @@ SketchPluginLog.prototype.log = function(message) {
     // Check Sketch context exists
     if (!this.hasOwnProperty('context') || typeof this.context !== 'object') {
         log(this.settings.logPrefix + ' : ' + 'Context not set for SketchPluginLog! Set it with `setContext`');
+
+        return this;
     }
 
     this.context.api().log(this.settings.logPrefix + ' : ' + message);
