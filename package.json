@@ -1,0 +1,22 @@
+{
+  "name": "sketch-plugin-log",
+  "version": "1.0.0",
+  "description": "A utility class for managing output to the Mac system log from your Sketch plugin.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sketch-plugin-development/sketch-plugin-log.git"
+  },
+  "keywords": [
+    "sketch",
+    "sketchapp",
+    "sketch app",
+    "sketch plugin"
+  ],
+  "author": "Zachary Schuessler",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/sketch-plugin-development/sketch-plugin-log/issues"
+  },
+  "homepage": "https://github.com/sketch-plugin-development/sketch-plugin-log#readme"
+}
