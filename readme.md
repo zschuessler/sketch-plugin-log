@@ -16,8 +16,8 @@ npm install sketch-plugin-log
 Import it into your Sketch plugin. Note the import path is relative to the running script!
 
 
-#### ~/MyPlugin.sketchplugin/Contents/Sketch/app.cocoascript
-```
+##### ~/MyPlugin.sketchplugin/Contents/Sketch/app.cocoascript
+```javascript
 @import '../node_modules/sketch-plugin-log/index.js';
 
 function onRun(context) {
