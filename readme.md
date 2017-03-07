@@ -28,7 +28,7 @@ function onRun(context) {
      *  Set the Sketch context - required.
      *  Set the log prefix - optional.
      */
-      logger
+     logger
           .setContext(context)
           .setLogPrefix('MyPluginName');
             
