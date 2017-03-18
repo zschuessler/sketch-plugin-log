@@ -47,10 +47,15 @@ function onRun(context) {
 
 ```
 
-## Tips
+### Viewing Logs
 
-Use the log prefix so that you may easily filter out noise from other Mac system logs. Create and save
-a custom search in your Console app for ease of use.
+See the tutorial below for becoming familiar with the Console app:
+
+http://www.macworld.com/article/3102847/macs/hands-on-with-macos-sierras-console-now-its-easier-to-get-the-mac-information-you-need.html
+
+Consider saving a custom search for "Message:MyPluginName". The "MyPluginName" is the log prefix set in the example.
+Filtering based on this identifier leaves you with a clean look at all system logs, which only pertain to your plugin.
+
 
 ## Roadmap / About
 
