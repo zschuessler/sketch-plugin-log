@@ -34,10 +34,18 @@ function onRun(context) {
             
       // Use it. See result in the Console app
       logger.log('Hello there!');
+      
+      // Dump a CocoaScript object. See result in the Console app.
+      var myCocoaScriptObject = WebView.new();
+      logger.log(myCocoaScriptObject);
+      
+      // Dump an object to a debug file.
+      // Great for when Console app doesn't show all information.
+      // Set the debug file path with `setDebugLogPath` or defaults to {Your plugin root}/Sketch/debug/debug.log
+      logger.debugObject(myCocoaScriptObject);
 }
 
 ```
-
 
 ## Tips
 
@@ -46,10 +54,8 @@ a custom search in your Console app for ease of use.
 
 ## Roadmap / About
 
-This library is a utility part of an upcoming book, "Sketch Plugin Development for Beginners" - this book
-teaches readers to develop Sketch plugins with HTML, CSS, and JavaScript.
+This library is a utility part of an upcoming book. Follow this repo for more information on release.
 
 Additional features will be added for debugging in Sketch:
 
-1. Ability to dump a full Mocha object to a file. Useful for when Console app cuts off dumping an object.
-2. Helper methods for inspecting Cocoa/Mocha objects.
+1. More intuitive display of CocoaScript objects with `debugObject`.
